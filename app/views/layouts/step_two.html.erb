@@ -1,9 +1,9 @@
-<h1>Convert <%=@cur%></h1>
+<h1>Convert <%=@from_cur%></h1>
 
 <ul>
   <% @currencies.each do |symbol| %>
     <li>
-      <a href="/forex/<%=@cur%>/<%=symbol%>/">Convert 1 <%=@cur%> to <%=symbol%>...</a>
+      <a href="/forex/<%=@from_cur%>/<%=symbol%>/">Convert 1 <%=@from_cur%> to <%=symbol%>...</a>
     </li>
   <%end%>
 
