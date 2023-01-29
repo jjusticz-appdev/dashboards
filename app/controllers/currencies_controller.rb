@@ -27,7 +27,7 @@ class CurrenciesController < ApplicationController
     @currencies = @parsed_data.fetch("symbols").keys
     @from_cur = params.fetch("from_currency")
     @to_cur = params.fetch("to_currency")
-    @exchange_raw = open("https://api.exchangerate.host/convert?from=#{@from_cur}&to=#{@to_cur}")
+    @exchange_raw = open("https://api.exchangerate.host/convert?from=#{@from_cur}&to=#{@to_cur}").read
     @exchange_parsed = JSON.parse(@exchange_raw)
     @exchange_rate = @exchange_parsed.fetch("result")
 
